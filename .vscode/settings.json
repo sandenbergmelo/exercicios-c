@@ -1,0 +1,12 @@
+{
+  "cSpell.words": [
+    "apcao",
+    "codigos",
+    "indice",
+    "opcao"
+  ],
+  "files.associations": {
+    "stdio.h": "c",
+    "stdbool.h": "c"
+  }
+}

@@ -11,6 +11,15 @@ void limpar() {
 #endif
 }
 
+void mostrarMenu() {
+  printf("O que deseja fazer?\n");
+  printf("[1] - Efetuar depósito.\n");
+  printf("[2] - Efetuar saque.\n");
+  printf("[3] - Consultar ativos.\n");
+  printf("[4] - Sair do programa.\n");
+  printf("Selecione uma opção: ");
+}
+
 // Função que verifica se o código já existe
 bool codigoJaDigitado(int codigo, int conta[10]) {
   for (int i = 1; i <= 10; i++) {
@@ -163,12 +172,7 @@ int main() {
   limpar();
 
   while (true) {
-    printf("O que deseja fazer?\n");
-    printf("[1] - Efetuar depósito.\n");
-    printf("[2] - Efetuar saque.\n");
-    printf("[3] - Consultar ativos.\n");
-    printf("[4] - Sair do programa.\n");
-    printf("Selecione uma opção: ");
+    mostrarMenu();
     scanf("%d", &opcao);
 
     if (opcao == 1) {
@@ -180,8 +184,7 @@ int main() {
     } else if (opcao == 4) { // Sair do programa
       break;
     } else {
-      printf("Opção inválida.\n");
-      limpar();
+      printf("\nOpção inválida.\n\n");
     }
   }
 
